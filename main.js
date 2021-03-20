@@ -8,15 +8,6 @@ var typewriter = setInterval(function(){
     }
 }, 100);
 
-let caruselNum = 1;
-setTimeout( _=>{
-    if(caruselNum === 5){
-        caruselNum = caruselNum - 1; 
-    }else{
-        caruselNum = caruselNum + 1; 
-    }
-    document.querySelector('.forevision-intro').classList.add(`intro-${caruselNum}`);
-}, 3000);
 
 
 
