@@ -18,7 +18,7 @@ var typewriter = setInterval(function(){
         center: true,
         margin: 0,
         autoplay:true,
-        autoplayTimeout:1000,
+        autoplayTimeout:3000,
         autoplayHoverPause:true,
         responsiveClass: true,
         nav: false,
@@ -45,24 +45,27 @@ var typewriter = setInterval(function(){
     })(jQuery);
   })();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  (function () {
+    "use strict";
+  
+    var carousels = function () {
+      $(".owl-carousel2").owlCarousel({
+        loop: true,
+        center: true,
+        margin: 0,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        responsiveClass: true,
+        nav: true,
+        items: 1,
+      });
+    };
+  
+    (function ($) {
+      carousels();
+    })(jQuery);
+  })();
 
 // Check If There's Local Storage Color Option
 let mainColors = localStorage.getItem("color_option");
@@ -220,7 +223,7 @@ function randomizeImgs() {
 randomizeImgs();
 
 // Select Skills Selector
-let ourSkills = document.querySelector(".skills");
+let ourSkills = document.querySelector(".forevision-whyUs");
 
 window.onscroll = function () {
 
@@ -238,13 +241,7 @@ window.onscroll = function () {
 
   if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
 
-    let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
-
-    allSkills.forEach(skill => {
-
-      skill.style.width = skill.dataset.progress;
-
-    });
+    document.querySelector('.forevision-whyUs-inner').classList.add('active');
 
   }
 

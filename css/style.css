@@ -318,12 +318,27 @@ body {
     color: var(--main-color);
 }
 .apartment{
-    width: 350px;
+    /*width: 350px;*/
     background-color: var(--main-color);
     border-radius: 10px;
     overflow: hidden;
     margin: 30px;
     box-shadow: 0px 0px 10px #0000008c;
+    position: relative;
+    opacity: .5;
+    transition: all 0.3s;
+}
+.owl-item.active.center .apartment{
+    opacity: 1;
+    top: -20px;
+}
+.apartment h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    letter-spacing: 2px;
 }
 .apartment img{
     width: 100%;
@@ -402,65 +417,39 @@ button{
     position: relative;
     z-index: 2;
 }
+.testimonial{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+}
+.testimonial .testi-1 p{
+    line-height: 22px;
+    letter-spacing: .7px;
+}
+.testimonials .owl-nav{
+    background-color: white;
+    width: 50px;
+    margin: 15px auto;
+    border-radius: 4px;
+    padding: 0px;
+}
+.testimonials .owl-nav button{
+    width: 50%;
+    margin: 0;
+}
+.testimonials .owl-nav button span{
+    color: #000;
+    font-size: 30px;
+}
 @media (max-width: 767px) {
     .testimonials h2 {
         text-align: center;
     }
 }
-.testimonials .ts-box {
-    position: relative;
-    z-index: 2;
-    width: calc(98% / 3);
-    float: left;
-    background-color: #FFF;
-    padding: 20px;
-}
-@media (max-width: 767px) {
-    .testimonials .ts-box {
-        width: 100%;
-        float: none;
-        margin-bottom: 10px;
-    }
-}
-.testimonials .ts-box:not(:last-of-type) {
-    margin-right: 1%;
-}
-.testimonials .ts-box > p {
-    margin: 0 0 20px;
-    line-height: 1.5;
-    font-size: 15px;
-    color: #707070;
-    font-style: italic;  
-}
-.testimonials .ts-box .person-info {
-    overflow: hidden;
-}
-@media (max-width: 991px) {
-    .testimonials .ts-box .person-info {
-        text-align: center;
-        overflow: visible;
-    }
-}
-.testimonials .ts-box .person-info img {
-    float: left;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-@media (max-width: 991px) {
-    .testimonials .ts-box .person-info img {
-        float: none;
-        margin-right: 0;
-    }
-}
-.testimonials .ts-box .person-info h4 {
-    margin: 14px 0 10px;
-}
-.testimonials .ts-box .person-info p {
-    color: #707070;
-    margin: 0;
-}
-  /* End Testimonials */
-  /* Start Contact Us */
+/* End Testimonials */
+
+/* Start Contact Us */
 .contact {
     min-height: 600px;
     background-image: url('../images/contact.png');
@@ -594,6 +583,11 @@ button{
 
 
 
+ 
+
+
+
+ 
 
 
 
@@ -696,33 +690,6 @@ button{
     font-size: 13px;
     text-align: center;
 }
-.forsision-posts{
-    text-align: center;
-    background-color: hsl(0, 0%, 90%);
-}
-.forsision-posts-inner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.post{
-    margin: 20px;
-}
-.fb-post{
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px rgb(0 0 0 / 10%);
-}
-
-.forevision-testimonials{
-    
-}
-
-.forevision-contactUs{
-    background-color: hsl(0, 0%, 90%);
-}
-
-
 
 
 .forevision-companyFoundersInner {
