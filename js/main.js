@@ -9,6 +9,21 @@ var typewriter = setInterval(function(){
 }, 100);
 
 
+
+let apart1 = ["Saab", "Volvo", "BMW"];
+document.querySelectorAll('.apartment img').forEach(element =>{
+  element.addEventListener("click", (e) => {
+    element.classList.add('active');
+
+    var img = document.createElement("img");
+    var src = document.createAttribute("src"); 
+    img.setAttributeNode(src);
+    img.src = "medo.jpg";                           // Set the value of the class attribute
+    document.querySelector('.apartments').appendChild(img);
+    document.querySelector('.apartments').appendChild(img);
+  });
+});
+
 (function () {
     "use strict";
   
